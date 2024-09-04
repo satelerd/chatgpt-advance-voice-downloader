@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descargar Audio ChatGPT</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: #ffffff;
+    }
+    h1 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .input-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #444;
+      background-color: #2d2d2d;
+      color: #ffffff;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+    #statusMessage {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 14px;
+      text-align: center;
+    }
+    .status-card {
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .status-card.info {
+      background-color: #2196F3;
+    }
+    .status-card.success {
+      background-color: #4CAF50;
+    }
+    .status-card.error {
+      background-color: #f44336;
+    }
+  </style>
+</head>
+<body>
+  <h1>Descargar Audio ChatGPT</h1>
+  <div id="statusMessage" class="status-card"></div>
+  <form id="downloadForm">
+    <div class="input-group">
+      <label for="message_id">ID del mensaje:</label>
+      <input type="text" id="message_id" placeholder="Ingrese el ID del mensaje">
+    </div>
+    <div class="input-group">
+      <label for="conversation_id">ID de Conversación:</label>
+      <input type="text" id="conversation_id" placeholder="Ingrese el ID de la conversación">
+    </div>
+    <div class="input-group">
+      <label for="voice">Voz:</label>
+      <select id="voice"></select>
+    </div>
+    <div class="input-group">
+      <label for="token">Token:</label>
+      <input type="password" id="token">
+    </div>
+    <button type="submit" id="downloadButton">Descargar Audio</button>
+  </form>
+  <script src="popup.js"></script>
+</body>
+</html>
